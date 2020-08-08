@@ -7,6 +7,7 @@ import { Poppins_400Regular, Poppins_600SemiBold } from '@expo-google-fonts/popp
 import AppStack from './src/routes/AppStack';
 
 export default function App() {
+  { console.clear() }
   let [fontsLoaded] = useFonts({
     Archivo_400Regular,
     Archivo_700Bold,
@@ -15,7 +16,7 @@ export default function App() {
   });
 
   if(!fontsLoaded) {
-    <AppLoading/>
+    return <AppLoading/>;
   } else {
     return (
       <>
